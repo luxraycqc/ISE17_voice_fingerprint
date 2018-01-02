@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <h2>Verify your voice to finish logging in</h2>
+        {% if err %}
+          <div class="alert alert-danger" id="userAuthErr">Your voice did not match your username. Please try again.</div>
+        {% endif %}
+        <form role="form" class="form-signin" method="post" enctype="multipart/form-data">
+          <div id="recog" class="audio-samples">
+            <label class="audio-label"> Recording: </label>
+            <input type=file name="file">
+          </div>
+          <button id="btnSignUp" value="upload" type="submit" class="btn btn-lg btn-primary btn-block" type="button">Log in</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

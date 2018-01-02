@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1>Sign Up</h1>
+        <form role="form" class="form-signin" method="post" enctype="multipart/form-data">
+          <label for="inputName" class="sr-only">Username</label>
+          <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Username" required autofocus>
+          <label for="pswrd" class="sr-only">Password</label>
+          <input type="password" name="pswrd" id="pswrd" class="form-control" placeholder="Password" required autofocus>
+          <p id="randWord">Record and upload yourself saying <b>"{{recordingPhrase}}"</b> three times.</p>
+          <div class="audio-samples">
+            <label class="audio-label"> Recording 1: </label>
+            <input type=file name="file1">
+          </div>
+          <div class="audio-samples">
+            <label class="audio-label"> Recording 2: </label>
+            <input type=file name="file2">
+          </div>
+          <div class="audio-samples">
+            <label class="audio-label"> Recording 3: </label>
+            <input type=file name="file3">
+          </div>
+          <button id="btnSignUp" value="upload" type="submit" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
+        </form>
+        <p id="account"> Already have an account? </p>
+        <a href="/" id="login">Login<a>
+      </div>
+
+    </div>
+  </body>
+</html>

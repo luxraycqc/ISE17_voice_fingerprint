@@ -1,0 +1,20 @@
+{% extends 'signup.html' %}
+{% block recordingInit %}
+  {% if numRecordings == 1 %}
+    <p id="recordingPrompt"> Click the microphone to start recording and read the phrase below.
+    You will need to repeat this process {{numRecordings}} more time.</p>
+    <p id="recordingPhrase">{{recordingPhrase}}</p>
+    <a class="btn" href="#">
+      <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
+    </a>
+  {% elif numRecordings < maxRecordings %}
+    <p id="recordingPrompt"> Click the microphone to start recording and read the phrase below.
+    You will need to repeat this process {{numRecordings}} more times.</p>
+    <p id="recordingPhrase">{{recordingPhrase}}</p>
+    <a class="btn" href="#">
+      <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
+    </a>
+  {% else %}
+    <p>Your voice recordings are complete.</p>
+  {% endif %}
+{% endblock %}

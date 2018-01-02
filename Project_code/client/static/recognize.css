@@ -1,0 +1,29 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.fa {
+  margin-bottom: 10px;
+}
+
+#recordingPhrase {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#voiceAuthErr {
+  margin: 15px;
+  background-color: #d64242;
+  border-color: #d64242;
+  color: white;
+  font-size: 20px;
+}
+
+.audio-samples{
+  display: -webkit-box;
+}
+
+.audio-label{
+  margin-right: 20px;
+}

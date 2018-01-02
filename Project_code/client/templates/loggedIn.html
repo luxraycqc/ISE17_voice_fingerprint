@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <h2>Welcome, {{username}}!</h2>
+        <p>You've successfully logged in.</p>
+        <form role="form" class="form-signin" method="post" enctype="multipart/form-data">
+          <img src="../static/loggedIn.gif"/>
+          <button id="btnSignUp" value="upload" type="submit" class="btn btn-lg btn-primary btn-block" type="button">Log out</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

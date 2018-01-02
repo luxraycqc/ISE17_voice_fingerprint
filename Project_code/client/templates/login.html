@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1>Log in</h1>
+        {% if err == "username" %}
+          <div class="alert alert-danger" id="userAuthErr">Username is not registerd. Please try again.</div>
+        {% elif err == "password" %}
+          <div class="alert alert-danger" id="psswrdAuthErr">Password is incorrect. Please try again.</div>
+        {% endif %}
+        <form class="form-login" method="post" enctype="multipart/form-data">
+          <label for="inputUsrname" class="sr-only">Username</label>
+          <input type="name" name="inputUsrname" id="inputUsrname" class="form-control" placeholder="Username" required autofocus>
+          <label for="pswrd" class="sr-only">Password</label>
+          <input type="password" name="pswrd" id="pswrd" class="form-control" placeholder="Password" required autofocus>
+          <button value="upload" type="submit" id="btnPswrdAuth" class="btn btn-lg btn-primary btn-block" type="button">Next</button>
+        </form>
+        <p id="account"> Don't have an account? </p>
+        <a id="signup" href="/signup">Sign up<a>
+      </div>
+
+    </div>
+  </body>
+</html>
